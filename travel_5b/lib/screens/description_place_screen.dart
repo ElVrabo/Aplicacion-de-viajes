@@ -60,7 +60,6 @@ class DescriptionPlaceScreen extends StatelessWidget {
       children: [
         titleAndStars, //se pondra en un renglon (uno a lado del otro)
         description,
-        ReviewList(),
       ],
     );
   }

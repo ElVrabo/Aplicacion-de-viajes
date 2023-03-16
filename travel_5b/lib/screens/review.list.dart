@@ -7,14 +7,15 @@ class ReviewList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final encabezado = Container(
-        margin: EdgeInsets.only(top: 40),
+        margin: EdgeInsets.only(top: 10),
         alignment: Alignment.center,
         child: const Text(
           'Recent Comments',
-          style: TextStyle(color: Colors.orange, fontSize: 60),
+          style: TextStyle(color: Colors.orange, fontSize: 30),
         ));
     return Column(
       children: [
+        encabezado,
         Review(
             pathImage:
                 'https://tse1.mm.bing.net/th?id=OIP.VQeCBzJyv7dwSqO9T3IR4QHaHa&pid=Api&rs=1&c=1&qlt=95&w=105&h=105',
@@ -39,6 +40,20 @@ class ReviewList extends StatelessWidget {
             user: 'pancracio jones',
             details: '3 review 2 photos',
             comments: 'Beatiful place and great people'),
+        Container(
+          margin: const EdgeInsets.only(top: 25),
+          child: MaterialButton(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(13.0)),
+              child: Text(
+                'Ver mi perfil',
+                style: const TextStyle(color: Colors.white),
+              ),
+              color: Colors.blue,
+              onPressed: () {
+                Navigator.pushNamed(context, 'profile');
+              }),
+        )
       ],
     );
   }
